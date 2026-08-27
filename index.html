@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro García Espinoza | Executive Portfolio - Transformación Digital & Mejora Continua</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --accent-blue: #38bdf8;
+            --accent-cyan: #06b6d4;
+            --accent-emerald: #10b981;
+            --accent-purple: #a855f7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+            --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-blue);
+        }
+
+        .btn-contact {
+            background: var(--gradient-accent);
+            color: #fff;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Header / Hero Section */
+        header {
+            padding: 9rem 2rem 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle-linkedin {
+            font-size: 1.05rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-cyan);
+            line-height: 1.5;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .metric-card {
+            text-align: left;
+        }
+
+        .metric-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Profile Card Sidebar */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 5px;
+            background: var(--gradient-accent);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #0f172a;
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: var(--accent-blue);
+            border: 3px solid var(--border-color);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .profile-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .profile-tag {
+            font-size: 0.85rem;
+            color: var(--accent-purple);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg-card-hover);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-blue);
+            color: #0f172a;
+            transform: translateY(-3px);
+        }
+
+        .profile-info-list {
+            text-align: left;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .profile-info-item {
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        /* Methodology Section */
+        .methodology-container {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .methodology-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .method-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .method-step {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.05);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+
+        .method-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .method-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .method-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Value Areas Section */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.8rem;
+            display: flex;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-purple);
+        }
+
+        .value-icon {
+            font-size: 1.6rem;
+            color: var(--accent-purple);
+            background: rgba(168, 85, 247, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .value-content p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Interactive Filter Tabs for Experience */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.55rem;
+            top: 0.2rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 4px solid var(--bg-dark);
+        }
+
+        .timeline-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .role-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .company-name {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .timeline-date {
+            background: rgba(255,255,255,0.05);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .timeline-bullets {
+            list-style-type: none;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .timeline-bullets li {
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .timeline-bullets li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        .timeline-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.2rem;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        /* Certifications & Skills Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent-emerald);
+            transform: translateY(-3px);
+        }
+
+        .cert-icon {
+            font-size: 1.8rem;
+            color: var(--accent-emerald);
+            background: rgba(16, 185, 129, 0.1);
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-info p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer / Contact */
+        footer {
+            background: #090d16;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-cta {
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .footer-cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-main);
+            text-decoration: none;
+            background: var(--bg-card);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            header {
+                grid-template-columns: 1fr;
+                padding-top: 7rem;
+            }
+            .profile-card {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+            .timeline {
+                padding-left: 1rem;
+            }
+            .timeline-item::before {
+                left: -1.55rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Pedro García Espinoza | Executive Leader</div>
+        <ul class="nav-links">
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#valor">Áreas de Valor</a></li>
+            <li><a href="#experiencia">Trayectoria</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+        </ul>
+        <a href="mailto:pedrogspain@gmail.com" class="btn-contact"><i class="fas fa-envelope"></i> Contactar</a>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="perfil">
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-chart-line"></i> Mi objetivo es simple: hacer que las cosas sucedan</div>
+            <h1 class="hero-title">Lidero la identificación de pérdida de valor y dirijo la transformación sostenible.</h1>
+            
+            <!-- LinkedIn Header Sync -->
+            <div class="hero-subtitle-linkedin">
+                Especialista Senior en Transformación Digital y Mejora Continua | IA Quirurjica, aplicada a Procesos Críticos | Lean Six Sigma Black Belt - ISO 27001, 22301 - SGI | PMO & Gestión Ágil de Equipos y Gestión de Stakeholders C-Level
+            </div>
+
+            <p class="hero-description">
+                Ingeniero de Sistemas. Con amplia trayectoria internacional en Perú y España. Dirijo la evolución operativa y Transformación digital de organizaciones complejas (Banca, Seguros, Telecom, Sector Público). Mi enfoque de gestión combina reingeniería Lean Six Sigma, gobierno de riesgos y la determinación estratégica de IA aplicada estrictamente en puntos críticos donde genera impacto directo en OKRs, KPIs y SLAs.
+            </p>
+
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <span class="metric-number">99.5%</span>
+                    <span class="metric-label">Optimización Tiempos IA (de 7 días a 5 min)</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">25+</span>
+                    <span class="metric-label">Años de Liderazgo Internacional</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Cumplimiento en Gobierno & ISO</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Profile Card -->
+        <div class="profile-card">
+            <div class="profile-avatar">
+                <img src="Foto Portafolio.jpg" alt="Pedro García Espinoza" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <h2 class="profile-name">Pedro García Espinoza</h2>
+            <p class="profile-tag">Transformación Digital - Procesos Core de Negocio - IA Quirúrgica</p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pedro-garcia-espinoza-1b659119/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:pedrogspain@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://drive.google.com/drive/folders/0B2Eacju5Uy-5V0NabDdsMDNGN1E?resourcekey=0-9rAiZ5XipVaox_2g1jv5kg&usp=sharing" target="_blank" class="social-btn" title="Cuaderno Notebook / Skills Drive"><i class="fab fa-google-drive"></i></a>
+            </div>
+
+            <div class="profile-info-list">
+                <div class="profile-info-item"><i class="fas fa-globe-americas" style="color:var(--accent-blue)"></i> Doble Nacionalidad: Peruana / Española (UE)</div>
+                <div class="profile-info-item"><i class="fas fa-map-marker-alt" style="color:var(--accent-cyan)"></i> Lima, Perú | Movilidad Internacional</div>
+                <div class="profile-info-item"><i class="fas fa-certificate" style="color:var(--accent-emerald)"></i> Lean Six Sigma Black Belt</div>
+                <div class="profile-info-item"><i class="fas fa-shield-alt" style="color:var(--accent-purple)"></i> Auditor ISO 27001 / ISO 22301 / SGI</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Methodology Section -->
+    <section id="metodologia">
+        <div class="section-header">
+            <span class="section-subtitle">Framework Estratégico</span>
+            <h2 class="section-title">Metodología de Transformación Digital Basada en Valor</h2>
+            <span class="section-subtitle">Diagnóstico → Mejora Continua → Solución Óptima → Resultados</span>
+        </div>
+
+        <div class="methodology-container">
+            <p class="methodology-intro">
+                "Automatizamos y aplicamos IA donde corresponde, no en todo el proceso." Una visión estratégica orientada al ROI real, que integra metodología Lean Six Sigma, arquitectura ágil y gobierno operativo para eliminar la ineficiencia estructural.
+            </p>
+
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <span class="method-step">01</span>
+                    <div class="method-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3 class="method-title">1. Diagnóstico de Pérdida de Valor</h3>
+                    <p class="method-desc">Identificación rigurosa mediante herramientas Gemba Walks, VSM, SIPOC y Makigami para detectar desperdicios, cuellos de botella y fugas financieras en el mapa AS-IS.</p>
+                </div>
+
+                <div class="method-card">
+                    <span class="method-step">02</span>
+                    <div class="method-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 class="method-title">2. Determinación de IA & Tech Relevante</h3>
+                    <p class="method-desc">Evaluación estratégica para insertar IA Generativa, automatización o microservicios <strong>únicamente en puntos críticos de alto impacto</strong>, asegurando viabilidad y ROI.</p>
+                </div>
+
+                <div class="method-card">
+                    <span class="method-step">03</span>
+                    <div class="method-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3 class="method-title">3. Rediseño TO-BE & Gobierno Ágil</h3>
+                    <p class="method-desc">Diseño de la arquitectura funcional y optimización de Procesos Core, alineando marcos ágiles (SAFe, Scrum, Kanban, Management 3.0) y definiendo OKRs, KPIs y SLAs rigurosos.</p>
+                </div>
+
+                <div class="method-card">
+                    <span class="method-step">04</span>
+                    <div class="method-icon"><i class="fas fa-shield-virus"></i></div>
+                    <h3 class="method-title">4. Despliegue, Continuidad & Cambio</h3>
+                    <p class="method-desc">Implementación en producción con gobierno de Datos, Riesgos, IA, Ciberseguridad (ISO 27001) y Continuidad Operativa (ISO 22301), garantizando la adopción cultural del equipo, los Usuarios y guardianes de Procesos y Stakeholders tomadores de Decisiones.</p>
+                </div>
+
+                <div class="method-card">
+                    <span class="method-step">04</span>
+                    <div class="method-icon"><i class="fas fa-shield-virus"></i></div>
+                    <h3 class="method-title">5. Factores Clave</h3>
+                    <p class="method-desc">Después evaluar alternativas y seleccionar la solución que genere mayor valor al negocio, los Factores a considerar son Costo, Tiempo, Oportunidad y Contexto Organizacional.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Areas Section -->
+    <section id="valor">
+        <div class="section-header">
+            <span class="section-subtitle">Core Competencies</span>
+            <h2 class="section-title">Áreas en las que Genero Valor Estratégico</h2>
+        </div>
+
+        <div class="value-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="value-content">
+                    <h3>Gestión de Proyectos con Impacto Real</h3>
+                    <p>Dirección de portafolios complejos asegurando alineamiento presupuestal (CAPEX/OPEX), cálculo de ROI y retorno cuantitativo de negocio.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                <div class="value-content">
+                    <h3>Definición de OKRs, KPIs y SLAs</h3>
+                    <p>Establecimiento de cuadros de mando operativos e indicadores predictivos para control directivo C-Level y gestión de proveedores (Vendor Management).</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-sync-alt"></i></div>
+                <div class="value-content">
+                    <h3>Mejora Continua y Rediseño Crítico</h3>
+                    <p>Especialista certificado Lean Six Sigma Black Belt para eliminar variabilidad, reducir tiempos de ciclo y maximizar la eficiencia operativa.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-brain"></i></div>
+                <div class="value-content">
+                    <h3>Transformación Digital e IA Operativa</h3>
+                    <p>Pionero en despliegue de sistemas de IA Generativa vivos en producción, transformando procesos analíticos de días a minutos.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-users-cog"></i></div>
+                <div class="value-content">
+                    <h3>Gestión Ágil de Equipos</h3>
+                    <p>Liderazgo matricial y cultural impulsado por marcos SAFe, Scrum, Kanban y Management 3.0 para alta efectividad colaborativa.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="value-content">
+                    <h3>Gobierno de Riesgos y Continuidad</h3>
+                    <p>Auditor calificado en ISO 27001 (Ciberseguridad) e ISO 22301 (Continuidad de Negocio - SGI) asegurando resiliencia organizacional.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-sitemap"></i></div>
+                <div class="value-content">
+                    <h3>Análisis AS-IS / TO-BE & Automatización</h3>
+                    <p>Mapeo profundo de arquitecturas empresariales e identificación oportuna de espacios para automatización robótica e integración Cloud/APIs.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-search-location"></i></div>
+                <div class="value-content">
+                    <h3>Herramientas de Diagnóstico de Excelencia</h3>
+                    <p>Dominio práctico y directivo de Gemba Walks, 5S, Value Stream Mapping (VSM), Kaizen, Makigami, SIPOC y Análisis Ishikawa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Trajectory Section -->
+    <section id="experiencia">
+        <div class="section-header">
+            <span class="section-subtitle">Trayectoria Profesional</span>
+            <h2 class="section-title">Liderazgo Directivo & Casos de Éxito</h2>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterTimeline('all')">Todos los Sectores</button>
+            <button class="filter-btn" onclick="filterTimeline('publico')">Sector Público</button>
+            <button class="filter-btn" onclick="filterTimeline('banca')">Banca & Seguros</button>
+            <button class="filter-btn" onclick="filterTimeline('consultoria')">Consultoría & TI</button>
+        </div>
+
+        <div class="timeline">
+            <!-- Experience 1 -->
+            <div class="timeline-item" data-category="publico">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="role-title">Consultor Senior - Dirección de Transformación Digital e IA</h3>
+                            <span class="company-name">Congreso de la República del Perú</span>
+                        </div>
+                        <span class="timeline-date"></span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Lideré el diseño, gobernanza y despliegue en producción de 2 sistemas de Inteligencia Artificial Generativa para análisis normativo en más de 20 comisiones legislativas.</li>
+                        <li>Logré una reducción trascendental de tiempos operativos de 2 a 7 días a menos de 5 minutos (99.5% de mejora en eficiencia analítica) con control de 'defectos cognitivos' cercano a cero.</li>
+                        <li>Gestión del cambio organizativo, gobierno de datos y aseguramiento de la continuidad operativa bajo estándares regulatorios estatales.</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">IA Generativa en Producción</span>
+                        <span class="tag">Gobierno de TI</span>
+                        <span class="tag">Change Management</span>
+                        <span class="tag">Rediseño de Procesos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="timeline-item" data-category="consultoria">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="role-title">Jefe de Proyectos Corporativos / Delivery Lead</h3>
+                            <span class="company-name">Indra Perú (Clientes: MAPFRE, Grupo Romero, Excelia)</span>
+                        </div>
+                        <span class="timeline-date"></span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Dirigí el portafolio de modernización tecnológica (APIs, microservicios, arquitectura empresarial) garantizando el cumplimiento estricto de SLAs contractuales y calidad.</li>
+                        <li>Gestión integral de stakeholders C-Level, coordinación matricial de equipos de alto rendimiento bajo marcos Scrum y Kanban.</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Portfolio Management</span>
+                        <span class="tag">Arquitectura Empresarial</span>
+                        <span class="tag">SLAs & Vendor Control</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="timeline-item" data-category="banca">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="role-title">Project Manager & Process Lead Senior</h3>
+                            <span class="company-name">Tata Consultancy Services (Clientes: BCP, Prima AFP)</span>
+                        </div>
+                        <span class="timeline-date"></span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Lideré iniciativas de reingeniería de procesos e integración de sistemas core bancarios y aseguradores.</li>
+                        <li>Reduje en un 30% las incidencias operativas mediante la optimización del flujo end-to-end de aseguramiento de calidad y requerimientos.</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Lean Six Sigma</span>
+                        <span class="tag">Banca & AFP</span>
+                        <span class="tag">Gestión de Riesgos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 4 -->
+            <div class="timeline-item" data-category="consultoria">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="role-title">Senior Project Manager & Operaciones TI (Trayectoria España)</h3>
+                            <span class="company-name">Entidades de Primer Nivel en España (Banco Santander, MAPFRE, Repsol, Gas Natural, SEUR, Grupo UNIDE, Supermercados Ahold / Supersol. Servicio Madrileño de Salud - SERMAS, Consorcio de Transportes de Madrid - CRTM)</span>
+                        </div>
+                        <span class="timeline-date"></span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>11 años de trayectoria internacional en Europa dirigiendo programas de gobierno de aplicaciones, optimización de infraestructura y excelencia operativa.</li>
+                        <li>Gestión presupuestal multimillonaria, homologación de estándares comunitarios europeos e interoperabilidad de sistemas públicos e industriales.</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">Experiencia Internacional UE</span>
+                        <span class="tag">Gobierno ITIL/COBIT</span>
+                        <span class="tag">Gestión Multi-Corporativa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Education Section -->
+    <section id="certificaciones">
+        <div class="section-header">
+            <span class="section-subtitle">Cuaderno de Skills & Acreditaciones</span>
+            <h2 class="section-title">Certificaciones y Formación Académica</h2>
+        </div>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h4>Lean Six Sigma Black Belt</h4>
+                    <p>Acreditación de Excelencia Operativa, VSM y Rediseño de Procesos Críticos.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="cert-info">
+                    <h4>Auditor Interno ISO 27001 / ISO 22301</h4>
+                    <p>Seguridad de la Información, Continuidad de Negocio y Sistema de Gestión Integrado (SGI).</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-tasks"></i></div>
+                <div class="cert-info">
+                    <h4>PMBOK® 7 & Agile Master</h4>
+                    <p>Gestión Estratégica de Proyectos, Marcos SAFe, Scrum, Kanban y Management 3.0.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="cert-info">
+                    <h4>Ingeniero de Sistemas (Doble Titulación)</h4>
+                    <p>Título homologado oficialmente por el Ministerio de Educación de España y la UE.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                <div class="cert-info">
+                    <h4>Especialista en IA Aplicada a Procesos</h4>
+                    <p>Arquitecturas de Integración RAG, LLM APIs e Inteligencia Artificial Generativa en Producción.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-book-reader"></i></div>
+                <div class="cert-info">
+                    <h4>Transformación Digital en el Sector Público / Etica e Innovación </h4>
+                    <p>Tecnologías y Herramientas clave para la Transformación Digital.</p>
+                    <p>Servicios Públicos centrados en el Ciudadano y Diseño de Experiencias y Servicios Digitales.</p>
+                    <p>Estrategias e Implementación de Transformación Digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer>
+        <div class="footer-cta">
+            <h2>¿Listo para impulsar la transformación y eficiencia de su organización?</h2>
+            <p>Disponible para Liderar y Dirigir la Transformación Digital, Operaciones, PMO y Mejora Continua.</p>
+            <p>Colaboración Continua en Staff o plantilla, Proyectos puntuales, Mentoría y Coaching.</p>
+            
+            <div class="contact-info-grid">
+                <a href="mailto:pedrogspain@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> pedrogspain@gmail.com</a>
+                <a href="tel:+51964399237" class="contact-item"><i class="fas fa-phone-alt"></i> +51 964 399 237</a>
+                <a href="https://www.linkedin.com/in/pedro-garcia-espinoza-1b659119/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> Perfil LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Pedro García Espinoza | Executive Transformation Leader. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Filtering Script -->
+    <script>
+        function filterTimeline(category) {
+            const items = document.querySelectorAll('.timeline-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
